@@ -1,0 +1,407 @@
+# X-Template V.0.0.0-Genesis
+
+> Cyberpunk Glassmorphism starter template — React + TypeScript + Vite
+
+[![Deploy to GitHub Pages](https://github.com/Ex2-Axon/x-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/Ex2-Axon/x-template/actions/workflows/deploy.yml)
+[![Bluesky](https://img.shields.io/badge/Bluesky-%40microtronic.bsky.social-0085ff?logo=bluesky&logoColor=white)](https://bsky.app/profile/microtronic.bsky.social)
+
+**Live demo:** https://ex2-axon.github.io/x-template/
+
+![Screenshot](screenshot.png)
+
+---
+
+## Stack
+
+| | |
+|---|---|
+| **Framework** | React 19 + TypeScript |
+| **Build tool** | Vite 8 |
+| **Styling** | CSS (Glassmorphism + Neon) + Tailwind CSS 4 |
+| **Package manager** | pnpm |
+| **Deploy** | GitHub Pages (auto on push) |
+
+---
+
+## Features
+
+- Cyberpunk glassmorphism UI with full animation
+- Neon glow effects — cyan, pink, purple, green
+- Animated grid background + floating particles
+- Glitch text effect on title
+- Scanline CRT overlay
+- Orbit rings on hero image
+- Staggered entrance animations
+- Auto-deploy to GitHub Pages on push
+- Auto-post to Discord, Bluesky, X on push
+
+---
+
+## Getting Started
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start dev server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
+```
+
+---
+
+## GitHub Actions Workflows
+
+| Workflow | Trigger | Description |
+|---|---|---|
+| `deploy.yml` | push to main | Build & deploy to GitHub Pages |
+| `discord-notify.yml` | push to main | Send release embed to Discord |
+| `bluesky-notify.yml` | push to main | Post release to Bluesky |
+| `x-notify.yml` | push to main | Post release to X (Twitter) |
+
+### Required Secrets
+
+Go to **Settings → Secrets and variables → Actions** and add:
+
+| Secret | Description |
+|---|---|
+| `DISCORD_WEBHOOK_URL` | Discord webhook URL |
+| `BSKY_IDENTIFIER` | Bluesky handle (e.g. `microtronic.bsky.social`) |
+| `BSKY_APP_PASSWORD` | Bluesky app password |
+| `X_API_KEY` | X Consumer Key |
+| `X_API_SECRET` | X Consumer Secret |
+| `X_ACCESS_TOKEN` | X Access Token |
+| `X_ACCESS_TOKEN_SECRET` | X Access Token Secret |
+
+---
+
+## Project Structure
+
+```
+x-template/
+├── .github/
+│   └── workflows/
+│       ├── deploy.yml
+│       ├── discord-notify.yml
+│       ├── bluesky-notify.yml
+│       └── x-notify.yml
+├── public/
+│   ├── favicon.svg
+│   └── icons.svg
+├── src/
+│   ├── assets/
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.tsx
+├── package.json
+└── vite.config.ts
+```
+
+---
+
+## Connect
+
+- Bluesky: [@microtronic.bsky.social](https://bsky.app/profile/microtronic.bsky.social)
+- Discord: [Join server](https://discord.gg/8Zeq8VCU)
+- GitHub: [Ex2-Axon](https://github.com/Ex2-Axon)
+
+## Generation Prompt
+```text
+You are building a daily UI project. Below is the theme specification for today.
+
+## Theme Context (daily-context.json)
+```json
+{
+  "day": 34,
+  "date": "2026-05-30",
+  "version": "1.34.0",
+  "project_name": "x-template-034",
+  "theme": {
+    "name": "Vaporwave",
+    "style": "vaporwave",
+    "mood": "nostalgic, dreamy, pastel, retro-futuristic"
+  },
+  "palette": {
+    "background": "#0d0221",
+    "surface": "#1a0533",
+    "primary": "#ff71ce",
+    "accent": "#01cdfe",
+    "text": "#fffb96",
+    "muted": "#b967ff"
+  },
+  "typography": {
+    "heading": "Orbitron",
+    "body": "Rajdhani",
+    "size": "large"
+  },
+  "layout": {
+    "structure": "centered",
+    "density": "spacious",
+    "border_style": "neon gradient"
+  },
+  "animation": {
+    "level": "moderate",
+    "style": "fade, float, gradient shift"
+  },
+  "components": {
+    "hero_text": "AESTHETIC",
+    "subtitle": "A E S T H E T I C  V I B E S",
+    "button_label": "FEEL_",
+    "badge_text": "ONLINE — 1989"
+  },
+  "commit_message": "feat: UI Day 34 — Vaporwave [fallback]",
+  "source": "fallback",
+  "selected_component": {
+    "category": "Cards",
+    "component": "andrew-demchenk0_quick-seahorse-69.html",
+    "path": "C:\\Users\\User\\Documents\\GitHub\\Axon\\x-components\\Cards\\andrew-demchenk0_quick-seahorse-69.html",
+    "content": "<div class=\"card\">\n    <div class=\"card-img\"><div class=\"img\"></div></div>\n    <div class=\"card-title\">Product title</div>\n    <div class=\"card-subtitle\">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>\n    <hr class=\"card-divider\">\n    <div class=\"card-footer\">\n        <div class=\"card-price\"><span>$</span> 123.45</div>\n        <button class=\"card-btn\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><path d=\"m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z\"></path><path d=\"m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z\"></path><path d=\"m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z\"></path><path d=\"m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z\"></path></svg>\n        </button>\n    </div>\n</div>\n<style>\n/* demchenk0 - Tags: card, product, price, img, description, hover effect, buy now, title, product card */\n/* before adding the img to the div with the \n\"card-img\" class, remove css styles \n.card-img .img::before and .card-img .img::after,\nthen set the desired styles for .card-img. */\n.card {\n  --font-color: #323232;\n  --font-color-sub: #666;\n  --bg-color: #fff;\n  --main-color: #323232;\n  --main-focus: #2d8cf0;\n  width: 230px;\n  height: 300px;\n  background: var(--bg-color);\n  border: 2px solid var(--main-color);\n  box-shadow: 4px 4px var(--main-color);\n  border-radius: 5px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  padding: 20px;\n  gap: 10px;\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n}\n\n.card:last-child {\n  justify-content: flex-end;\n}\n\n.card-img {\n    /* clear and add new css */\n  transition: all 0.5s;\n  display: flex;\n  justify-content: center;\n}\n\n.card-img .img {\n /* delete */\n  transform: scale(1);\n  position: relative;\n  box-sizing: border-box;\n  width: 100px;\n  height: 100px;\n  border-top-left-radius: 80px 50px;\n  border-top-right-radius: 80px 50px;\n  border: 2px solid black;\n  background-color: #228b22;\n  background-image: linear-gradient(to top,transparent 10px,rgba(0,0,0,0.3) 10px,rgba(0,0,0,0.3) 13px,transparent 13px);\n}\n\n.card-img .img::before {\n /* delete */\n  content: '';\n  position: absolute;\n  width: 65px;\n  height: 110px;\n  margin-left: -32.5px;\n  left: 50%;\n  bottom: -4px;\n  background-repeat: no-repeat;\n  background-image: radial-gradient(ellipse at center,rgba(0,0,0,0.7) 30%,transparent 30%),linear-gradient(to top,transparent 17px,rgba(0,0,0,0.3) 17px,rgba(0,0,0,0.3) 20px,transparent 20px),linear-gradient(to right,black 2px,transparent 2px),linear-gradient(to left,black 2px,transparent 2px),linear-gradient(to top,black 2px,#228b22 2px);\n  background-size: 60% 10%,100% 100%,100% 65%,100% 65%,100% 50%;\n  background-position: center 3px,center bottom,center bottom,center bottom,center bottom;\n  border-radius: 0 0 4px 4px;\n  z-index: 2;\n}\n\n.card-img .img::after {\n /* delete */\n  content: '';\n  position: absolute;\n  box-sizing: border-box;\n  width: 28px;\n  height: 28px;\n  margin-left: -14px;\n  left: 50%;\n  top: -13px;\n  background-repeat: no-repeat;\n  background-image: linear-gradient(80deg,#ffc0cb 45%,transparent 45%),linear-gradient(-175deg,#ffc0cb 45%,transparent 45%),linear-gradient(80deg,rgba(0,0,0,0.2) 51%,rgba(0,0,0,0) 51%),linear-gradient(-175deg,rgba(0,0,0,0.2) 51%,rgba(0,0,0,0) 51%),radial-gradient(circle at center,#ffa6b6 45%,rgba(0,0,0,0.2) 45%,rgba(0,0,0,0.2) 52%,rgba(0,0,0,0) 52%),linear-gradient(45deg,rgba(0,0,0,0) 48%,rgba(0,0,0,0.2) 48%,rgba(0,0,0,0.2) 52%,rgba(0,0,0,0) 52%),linear-gradient(65deg,rgba(0,0,0,0) 48%,rgba(0,0,0,0.2) 48%,rgba(0,0,0,0.2) 52%,rgba(0,0,0,0) 52%),linear-gradient(22deg,rgba(0,0,0,0) 48%,rgba(0,0,0,0.2) 48%,rgba(0,0,0,0.2) 54%,rgba(0,0,0,0) 54%);\n  background-size: 100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 75%,100% 95%,100% 60%;\n  background-position: center center;\n  border-top-left-radius: 120px;\n  border-top-right-radius: 10px;\n  border-bottom-left-radius: 10px;\n  border-bottom-right-radius: 70px;\n  border-top: 2px solid black;\n  border-left: 2px solid black;\n  transform: rotate(45deg);\n  z-index: 1;\n}\n\n.card-title {\n  font-size: 20px;\n  font-weight: 500;\n  text-align: center;\n  color: var(--font-color);\n}\n\n.card-subtitle {\n  font-size: 14px;\n  font-weight: 400;\n  color: var(--font-color-sub);\n}\n\n.card-divider {\n  width: 100%;\n  border: 1px solid var(--main-color);\n  border-radius: 50px;\n}\n\n.card-footer {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.card-price {\n  font-size: 20px;\n  font-weight: 500;\n  color: var(--font-color);\n}\n\n.card-price span {\n  font-size: 20px;\n  font-weight: 500;\n  color: var(--font-color-sub);\n}\n\n.card-btn {\n  height: 35px;\n  background: var(--bg-color);\n  border: 2px solid var(--main-color);\n  border-radius: 5px;\n  padding: 0 15px;\n  transition: all 0.3s;\n}\n\n.card-btn svg {\n  width: 100%;\n  height: 100%;\n  fill: var(--main-color);\n  transition: all 0.3s;\n}\n\n.card-img:hover {\n  transform: translateY(-3px);\n}\n\n.card-btn:hover {\n  border: 2px solid var(--main-focus);\n}\n\n.card-btn:hover svg {\n  fill: var(--main-focus);\n}\n\n.card-btn:active {\n  transform: translateY(3px);\n}\n\n</style>"
+  }
+}
+```
+
+## Selected Component Reference
+- Category: Cards
+- Component: andrew-demchenk0_quick-seahorse-69.html
+- Path: C:\Users\User\Documents\GitHub\Axon\x-components\Cards\andrew-demchenk0_quick-seahorse-69.html
+
+Use the selected component HTML below as the primary design reference for the new UI. Keep the structure and styling assumptions in mind while rewriting the requested files.
+```html
+<div class="card">
+    <div class="card-img"><div class="img"></div></div>
+    <div class="card-title">Product title</div>
+    <div class="card-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <hr class="card-divider">
+    <div class="card-footer">
+        <div class="card-price"><span>$</span> 123.45</div>
+        <button class="card-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+        </button>
+    </div>
+</div>
+<style>
+/* demchenk0 - Tags: card, product, price, img, description, hover effect, buy now, title, product card */
+/* before adding the img to the div with the 
+"card-img" class, remove css styles 
+.card-img .img::before and .card-img .img::after,
+then set the desired styles for .card-img. */
+.card {
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  --main-focus: #2d8cf0;
+  width: 230px;
+  height: 300px;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card:last-child {
+  justify-content: flex-end;
+}
+
+.card-img {
+    /* clear and add new css */
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+}
+
+.card-img .img {
+ /* delete */
+  transform: scale(1);
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  border-top-left-radius: 80px 50px;
+  border-top-right-radius: 80px 50px;
+  border: 2px solid black;
+  background-color: #228b22;
+  background-image: linear-gradient(to top,transparent 10px,rgba(0,0,0,0.3) 10px,rgba(0,0,0,0.3) 13px,transparent 13px);
+}
+
+.card-img .img::before {
+ /* delete */
+  content: '';
+  position: absolute;
+  width: 65px;
+  height: 110px;
+  margin-left: -32.5px;
+  left: 50%;
+  bottom: -4px;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(ellipse at center,rgba(0,0,0,0.7) 30%,transparent 30%),linear-gradient(to top,transparent 17px,rgba(0,0,0,0.3) 17px,rgba(0,0,0,0.3) 20px,transparent 20px),linear-gradient(to right,black 2px,transparent 2px),linear-gradient(to left,black 2px,transparent 2px),linear-gradient(to top,black 2px,#228b22 2px);
+  background-size: 60% 10%,100% 100%,100% 65%,100% 65%,100% 50%;
+  background-position: center 3px,center bottom,center bottom,center bottom,center bottom;
+  border-radius: 0 0 4px 4px;
+  z-index: 2;
+}
+
+.card-img .img::after {
+ /* delete */
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  margin-left: -14px;
+  left: 50%;
+  top: -13px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(80deg,#ffc0cb 45%,transparent 45%),linear-gradient(-175deg,#ffc0cb 45%,transparent 45%),linear-gradient(80deg,rgba(0,0,0,0.2) 51%,rgba(0,0,0,0) 51%),linear-gradient(-175deg,rgba(0,0,0,0.2) 51%,rgba(0,0,0,0) 51%),radial-gradient(circle at center,#ffa6b6 45%,rgba(0,0,0,0.2) 45%,rgba(0,0,0,0.2) 52%,rgba(0,0,0,0) 52%),linear-gradient(45deg,rgba(0,0,0,0) 48%,rgba(0,0,0,0.2) 48%,rgba(0,0,0,0.2) 52%,rgba(0,0,0,0) 52%),linear-gradient(65deg,rgba(0,0,0,0) 48%,rgba(0,0,0,0.2) 48%,rgba(0,0,0,0.2) 52%,rgba(0,0,0,0) 52%),linear-gradient(22deg,rgba(0,0,0,0) 48%,rgba(0,0,0,0.2) 48%,rgba(0,0,0,0.2) 54%,rgba(0,0,0,0) 54%);
+  background-size: 100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 75%,100% 95%,100% 60%;
+  background-position: center center;
+  border-top-left-radius: 120px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 70px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.card-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--font-color-sub);
+}
+
+.card-divider {
+  width: 100%;
+  border: 1px solid var(--main-color);
+  border-radius: 50px;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--font-color);
+}
+
+.card-price span {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--font-color-sub);
+}
+
+.card-btn {
+  height: 35px;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  padding: 0 15px;
+  transition: all 0.3s;
+}
+
+.card-btn svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--main-color);
+  transition: all 0.3s;
+}
+
+.card-img:hover {
+  transform: translateY(-3px);
+}
+
+.card-btn:hover {
+  border: 2px solid var(--main-focus);
+}
+
+.card-btn:hover svg {
+  fill: var(--main-focus);
+}
+
+.card-btn:active {
+  transform: translateY(3px);
+}
+
+</style>
+```
+
+## Your Task
+Completely redesign the UI by rewriting these three files from scratch:
+- `src/App.tsx`
+- `src/App.css`
+- `src/index.css`
+
+## Rules for App.tsx
+1. Keep ALL existing imports:
+   - `import { useState, useEffect, useRef } from 'react'`
+   - `import reactLogo from './assets/react.svg'`
+   - `import viteLogo from './assets/vite.svg'`
+   - `import heroImg from './assets/hero.png'`
+   - `import './App.css'`
+2. Keep the `CounterNum` component (useRef + useEffect animation)
+3. Keep the counter button with `onClick` / `setCount` handler
+4. Keep the Documentation section (Vite/React links)
+5. Keep the Social section (GitHub/Discord/X/Bluesky links + SVG icons)
+6. Do NOT use CSS custom properties (`--var-name`) in inline `style` attributes — TypeScript will error
+
+## Rules for CSS
+- Apply the palette, typography, layout structure, animation level, and component text from the JSON above
+- Use Google Fonts via `@import` in `index.css`
+- Match the theme mood: nostalgic, dreamy, pastel, retro-futuristic
+
+## Mandatory Requirements (apply to every build)
+
+### 1. Responsive — Mobile First
+- Design for mobile (320px) first, scale up with `min-width` breakpoints
+- Touch targets minimum 44×44px
+- No horizontal scroll on any screen size
+- Fluid typography: use `clamp()` or responsive units (`rem`, `%`, `vw`)
+- Images and layout must reflow gracefully at 320px, 768px, 1280px
+
+### 2. Footer Copyright
+- The page MUST have a `<footer>` at the bottom
+- Footer text: `© 2026 Microtronic. All rights reserved.`
+- Style the footer to match the theme palette (muted text on surface background)
+
+### 3. SEO Standards
+- `index.html` must have a descriptive `<title>`: `AESTHETIC — Vaporwave | Microtronic`
+- Add `<meta name="description">` with the subtitle: `A E S T H E T I C  V I B E S`
+- Add `<meta name="keywords">` relevant to the theme
+- Add Open Graph tags: `og:title`, `og:description`, `og:type` (website)
+- All images must have meaningful `alt` attributes
+- Use semantic HTML: `<header>`, `<main>`, `<section>`, `<footer>`, `<nav>` where appropriate
+- Heading hierarchy: one `<h1>` (hero), `<h2>` for sections — no skipping levels
+
+## After saving all files
+1. Update `version` in `package.json` to `1.34.0`
+2. Update `<title>` and meta tags in `index.html` as specified above
+3. Run: `pnpm build`
+4. If build succeeds → write `done` to `scripts/build-done.flag`
+5. If build fails with TypeScript errors → fix them and rebuild
+
+```
