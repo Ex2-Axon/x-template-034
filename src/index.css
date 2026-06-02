@@ -1,42 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0d0221;
+  --color-surface: #1a0533;
+  --color-primary: #ff71ce;
+  --color-accent: #01cdfe;
+  --color-text: #fffb96;
+  --color-muted: #b967ff;
+  
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-rajdhani: "Rajdhani", sans-serif;
+}
 
 :root {
-  --neon-cyan: #00f5ff;
-  --neon-pink: #ff006e;
-  --neon-purple: #bf00ff;
-  --neon-green: #00ff88;
-  --neon-yellow: #ffee00;
-  --neon-orange: #ff6600;
+  --neon-cyan: #01cdfe;
+  --neon-pink: #ff71ce;
+  --neon-purple: #b967ff;
+  --neon-yellow: #fffb96;
+  
+  --bg-dark: #0d0221;
+  --bg-mid: #1a0533;
+  --bg-glass: rgba(1, 205, 254, 0.03);
+  --bg-glass-hover: rgba(1, 205, 254, 0.07);
 
-  --bg-dark: #020408;
-  --bg-mid: #050b14;
-  --bg-glass: rgba(0, 245, 255, 0.03);
-  --bg-glass-hover: rgba(0, 245, 255, 0.07);
+  --border-glass: rgba(1, 205, 254, 0.15);
+  --border-glow: rgba(1, 205, 254, 0.4);
 
-  --border-glass: rgba(0, 245, 255, 0.15);
-  --border-glow: rgba(0, 245, 255, 0.4);
+  --text-primary: #fffb96;
+  --text-secondary: #b967ff;
+  --text-dim: #5c2d91;
 
-  --text-primary: #e0f7ff;
-  --text-secondary: #7ecfdf;
-  --text-dim: #3a6b7a;
-
-  --shadow-cyan: 0 0 20px rgba(0, 245, 255, 0.3), 0 0 60px rgba(0, 245, 255, 0.1);
-  --shadow-pink: 0 0 20px rgba(255, 0, 110, 0.3), 0 0 60px rgba(255, 0, 110, 0.1);
-  --shadow-purple: 0 0 20px rgba(191, 0, 255, 0.3), 0 0 60px rgba(191, 0, 255, 0.1);
+  --shadow-cyan: 0 0 20px rgba(1, 205, 254, 0.3), 0 0 60px rgba(1, 205, 254, 0.1);
+  --shadow-pink: 0 0 20px rgba(255, 113, 206, 0.3), 0 0 60px rgba(255, 113, 206, 0.1);
+  --shadow-purple: 0 0 20px rgba(185, 103, 255, 0.3), 0 0 60px rgba(185, 103, 255, 0.1);
 
   --sans: 'Rajdhani', system-ui, sans-serif;
   --heading: 'Orbitron', system-ui, sans-serif;
-  --mono: 'Share Tech Mono', ui-monospace, monospace;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.5px;
   color-scheme: dark;
   color: var(--text-primary);
   background: var(--bg-dark);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ─── Scrollbar ─── */
@@ -56,9 +62,9 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(0, 245, 255, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(191, 0, 255, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 60% at 50% 50%, rgba(255, 0, 110, 0.03) 0%, transparent 70%);
+    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(1, 205, 254, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(185, 103, 255, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 50% 50%, rgba(255, 113, 206, 0.03) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
   animation: bgPulse 8s ease-in-out infinite alternate;
@@ -75,8 +81,8 @@ body::after {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(1, 205, 254, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(1, 205, 254, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
   pointer-events: none;
   z-index: 0;
@@ -91,8 +97,8 @@ body::after {
 #root {
   position: relative;
   z-index: 1;
-  width: 1126px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
   min-height: 100svh;
@@ -121,7 +127,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.5));
+  filter: drop-shadow(0 0 20px rgba(1, 205, 254, 0.5));
   animation: titleGlow 3s ease-in-out infinite alternate;
   overflow: visible;
 
@@ -133,9 +139,9 @@ h1 {
 }
 
 @keyframes titleGlow {
-  0%   { filter: drop-shadow(0 0 15px rgba(0, 245, 255, 0.4)); }
-  50%  { filter: drop-shadow(0 0 30px rgba(191, 0, 255, 0.6)); }
-  100% { filter: drop-shadow(0 0 20px rgba(255, 0, 110, 0.5)); }
+  0%   { filter: drop-shadow(0 0 15px rgba(1, 205, 254, 0.4)); }
+  50%  { filter: drop-shadow(0 0 30px rgba(185, 103, 255, 0.6)); }
+  100% { filter: drop-shadow(0 0 20px rgba(255, 113, 206, 0.5)); }
 }
 
 h2 {

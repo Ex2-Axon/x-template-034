@@ -1,5 +1,5 @@
 {
-  "name": "x-template",
+  "name": "x-template-034",
   "private": true,
   "version": "0.0.0-Genesis",
   "type": "module",
@@ -12,6 +12,8 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.3.0",
+    "framer-motion": "^12.40.0",
+    "lucide-react": "^1.17.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "tailwindcss": "^4.3.0"
